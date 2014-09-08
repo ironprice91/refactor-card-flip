@@ -20,7 +20,6 @@ opacity: 0;
 position: absolute;
 top: 0px;
 -webkit-backface-visibility: visible;
--webkit-perspective: 1000;
 }
 
 .portfolio-item {
@@ -36,6 +35,7 @@ transition: all 1.0s linear;
 
 .portfolio-item .back:hover {
 opacity: 1;
+-webkit-perspective: 1000;
 }
 
 .front.back {
