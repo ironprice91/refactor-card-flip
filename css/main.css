@@ -10,51 +10,28 @@
 
 .front {
 overflow: hidden;
-opacity: 1;
--webkit-backface-visibility: hidden;
+-webkit-backface-visibility: visible;
 }
 
 .back {
 padding: 20px;
-opacity: 0;
 position: absolute;
 top: 0px;
--webkit-backface-visibility: visible;
+opacity: 1;
+-webkit-backface-visibility: hidden;
 }
 
 .portfolio-item {
 position: relative;
-z-index: 1;
 }
 
 .portfolio-item:hover {
 transform: rotateY(180deg);
 -webkit-transform-style: preserve-3d;
 transition: all 1.0s linear;
-}
-
-.portfolio-item .back:hover {
-opacity: 1;
 -webkit-perspective: 1000;
 }
 
-.front.back {
-display: block;
-transform: rotateY(180deg);
+.portfolio-item .front {
+position: relative;
 }
-
-/*.portfolio-item .back:hover {
--webkit-transform: rotateY(180deg);
-transition-duration: 2s;
-opacity: 1;
--webkit-backface-visibility: visible;
-}
-
-.portfolio-item .front:hover {
--webkit-transform: rotateY(-180deg);
-transition-duration: 2s;
--webkit-backface-visibility: hidden;
-opacity: 1;
-}*/
-
-
