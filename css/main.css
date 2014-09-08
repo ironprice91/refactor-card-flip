@@ -10,7 +10,6 @@
 
 .front {
 overflow: hidden;
--webkit-backface-visibility: visible;
 }
 
 .back {
@@ -19,6 +18,7 @@ position: absolute;
 top: 0px;
 opacity: 1;
 -webkit-backface-visibility: hidden;
+transform: rotateY(180deg);
 }
 
 .portfolio-item {
