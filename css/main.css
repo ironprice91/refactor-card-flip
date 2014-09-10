@@ -8,30 +8,31 @@
 		-webkit-backface-visibility
 */
 
+.front, .back {
+	transition: -webkit-transform 1s;
+	-webkit-transform-style: preserve-3d;
+	-webkit-backface-visibility: hidden;
+}
+
 .front {
-overflow: hidden;
+	position: absolute;
 }
 
 .back {
-padding: 20px;
-position: absolute;
-top: 0px;
-opacity: 1;
--webkit-backface-visibility: hidden;
-transform: rotateY(180deg);
+	-webkit-transform: rotateY(-180deg);
 }
 
 .portfolio-item {
-position: relative;
+	-webkit-perspective: 600px;
 }
 
-.portfolio-item:hover {
-transform: rotateY(180deg);
--webkit-transform-style: preserve-3d;
-transition: all 1.0s linear;
--webkit-perspective: 1000;
+.portfolio-item:hover .back {
+	-webkit-transform: rotateY(0);
 }
 
-.portfolio-item .front {
-position: relative;
+.portfolio-item:hover .front {
+	-webkit-transform: rotateY(180deg);
 }
+
+
+
